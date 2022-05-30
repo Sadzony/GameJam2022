@@ -8,6 +8,10 @@ public class BikeSteering : MonoBehaviour
     public float steeringPower = 1;
     public float steeringDampener = 10;
 
+    public float steerMinimum = 5;
+
+    public float changeDirectionMultiplier = 2.5f;
+
     [Header("Leaning")]
     public float leaningPower = 1;
     public float leaningDampener = 10;
@@ -49,6 +53,11 @@ public class BikeSteering : MonoBehaviour
         float steeringTorque = (steeringPower * Mathf.Abs(angle)) / steeringDampener;
         float leaningTorque = (leaningPower * Mathf.Abs(angle)) / leaningDampener;
 
+        if(steeringTorque < steerMinimum)
+        {
+            steeringTorque = steerMinimum;
+        }
+
         float angleToGround = Vector3.SignedAngle(transform.up, Vector3.right, Vector3.forward);
 
         if (angleToGround < -10)
@@ -56,11 +65,20 @@ public class BikeSteering : MonoBehaviour
             //above ground
             if (angle < 0)
             {
+                //if moving opposite direction
+                if(accelerationRigidbody.angularVelocity.z > 0)
+                {
+                    AddTorqueRight(accelerationRigidbody, steeringTorque * changeDirectionMultiplier);
+                }
                 AddTorqueRight(accelerationRigidbody, steeringTorque);
                 AddTorqueRight(steeringRigidbody, leaningTorque);
             }
             else
             {
+                if (accelerationRigidbody.angularVelocity.z < 0)
+                {
+                    AddTorqueLeft(accelerationRigidbody, steeringTorque * changeDirectionMultiplier);
+                }
                 AddTorqueLeft(accelerationRigidbody, steeringTorque);
                 AddTorqueLeft(steeringRigidbody, leaningTorque);
             }
