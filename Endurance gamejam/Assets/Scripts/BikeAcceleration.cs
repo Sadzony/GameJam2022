@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BikeAcceleration : MonoBehaviour
 {
+    public bool stop = false;
     [SerializeField] private float torquePower;
     [HideInInspector] public Rigidbody rb;
     // Start is called before the first frame update
@@ -15,17 +16,13 @@ public class BikeAcceleration : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddTorque(Vector3.right * torquePower);
-    }
-
-
-
-    public void AddTorqueLeft(float power)
-    {
-        rb.AddTorque(Vector3.forward * power);
-    }
-    public void AddTorqueRight(float power)
-    {
-        rb.AddTorque(Vector3.back * power);
+        if (!stop)
+        {
+            rb.AddTorque(Vector3.right * torquePower);
+        }
+        else
+        {
+            rb.angularVelocity = new Vector3(0, 0, 0);
+        }
     }
 }
