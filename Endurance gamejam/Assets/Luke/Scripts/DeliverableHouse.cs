@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class DeliverableHouse : MonoBehaviour
 {
-    BoxCollider trigger;
-
     [HideInInspector]
     public bool delivered;
-    // Start is called before the first frame update
-    void Start()
+    private ObjectiveController objectiveController;
+    private void Start()
     {
-        trigger = GetComponent<BoxCollider>();
+        objectiveController = FindObjectOfType<ObjectiveController>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Newspaper"))
         {
-            Debug.Log("Delivered Newspaper");
             delivered = true;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if(objectiveController.deliverableHouse == this)
+        {
+            objectiveController.GenerateObjective();
         }
     }
 }

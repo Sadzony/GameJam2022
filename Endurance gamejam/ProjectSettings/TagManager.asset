@@ -8,6 +8,7 @@ TagManager:
   - HouseLeft
   - HouseRight
   - Loader
+  - DeliverableHouse
   layers:
   - Default
   - TransparentFX

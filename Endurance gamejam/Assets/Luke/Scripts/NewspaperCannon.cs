@@ -5,38 +5,52 @@ using UnityEngine;
 public class NewspaperCannon : MonoBehaviour
 {
     public GameObject newspaperPrefab;
-    public GameObject right;
+    public float range;
+    private ObjectiveController objectiveController;
+    private bool fired;
 
-    public void Fire(Vector3 origin, float inclination, float force)
+    private void Start()
     {
-        Vector3 housePosition = FindObjectOfType<ObjectiveController>().deliverableHouse.gameObject.transform.position;
-        Vector3 toHouse = housePosition - transform.position;
+        objectiveController = FindObjectOfType<ObjectiveController>();
+        fired = false;
+    }
+
+    private void Update()
+    {
+        Vector3 housePosition = objectiveController.deliverableHouse.gameObject.transform.position;
+
+        if (!fired)
+        {
+            Vector3 dist = housePosition - transform.position;
+            dist.y += 4;
+            float overrideForce = 4.0f;
+            if (dist.magnitude < range)
+            {
+                FireAtObjectiveHouse(housePosition, dist.magnitude * overrideForce);
+                fired = true;
+                Debug.Log("Fire");
+            }
+        }
+    }
+
+    public void Reload()
+    {
+        fired = false;
+        Debug.Log("Reloaded");
+    }
+
+    private void FireAtObjectiveHouse(Vector3 housePos, float force)
+    {
+        Vector3 toHouse = housePos - transform.position;
+        toHouse.y += 2;
         GameObject newspaper = Instantiate(newspaperPrefab);
 
-        Vector3 dynRight = Vector3.Cross(transform.up, transform.forward);
-        dynRight.Normalize();
-        Vector3 fullDir = new Vector3(1, inclination, 0);
-
-        float dot = Vector3.Dot(transform.right, toHouse);
-        Debug.Log("Dot: " + dot);
-
-        Vector3 toRight = transform.position - right.transform.position;
-
-        Debug.Log("Right: " + transform.right.x);
-
-        if (dot > 0)
-        {
-            Debug.Log("Right");
-            fullDir.x = -toRight.x;
-        }
-        else
-        {
-            Debug.Log("Left");
-            fullDir.x = toRight.x;
-        }
-
-        newspaper.transform.position = origin;
+        newspaper.transform.position = transform.position;
         Rigidbody rb = newspaper.GetComponent<Rigidbody>();
-        rb.AddForce(fullDir * force);
+
+        Newspaper newpaperScript = newspaper.GetComponent<Newspaper>();
+        newpaperScript.SetTarget(housePos);
+
+        rb.AddForce(toHouse * force);
     }
 }

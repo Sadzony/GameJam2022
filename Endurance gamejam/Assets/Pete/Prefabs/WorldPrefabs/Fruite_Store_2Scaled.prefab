@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 3387360257372103526}
   - component: {fileID: 3387360257371136422}
   - component: {fileID: 3387360257367036358}
+  - component: {fileID: -4787876570969223209}
+  - component: {fileID: 2936415704229265975}
   m_Layer: 0
   m_Name: Fruite_Store_2Scaled
-  m_TagString: Untagged
+  m_TagString: DeliverableHouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +99,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8803b91dc6a884f42b52380acbdc678e, type: 3}
+--- !u!114 &-4787876570969223209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387360257369145190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
+--- !u!65 &2936415704229265975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387360257369145190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.789796, y: 2.877986, z: 5.5896583}
+  m_Center: {x: 0.34201717, y: 1.4464583, z: 1.0352254}
