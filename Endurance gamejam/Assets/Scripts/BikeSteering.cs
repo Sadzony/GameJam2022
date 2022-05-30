@@ -42,7 +42,6 @@ public class BikeSteering : MonoBehaviour
     {
         steeringAxisInput = Input.GetAxisRaw("Horizontal") * inputPower;
         transform.position = transform.parent.position + offset;
-        transform.rotation = currentRotation;
     }
     private void FixedUpdate()
     {
@@ -71,7 +70,6 @@ public class BikeSteering : MonoBehaviour
             {
                 AddTorqueRight(steeringRigidbody, steeringAxisInput);
             }
-            currentRotation = steeringRigidbody.rotation;
         }
         else
         {
