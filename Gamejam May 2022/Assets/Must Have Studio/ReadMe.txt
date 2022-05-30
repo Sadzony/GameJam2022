@@ -1,3 +1,0 @@
-- Project visualization (processing in HDRP) improved;
-- Themed rigged characters added;
-- Fixed bugs.
