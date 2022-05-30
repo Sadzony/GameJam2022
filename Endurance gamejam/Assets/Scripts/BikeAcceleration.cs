@@ -6,6 +6,7 @@ public class BikeAcceleration : MonoBehaviour
 {
     public bool stop = false;
     [SerializeField] private float torquePower;
+    [SerializeField] private float speedPower;
     [HideInInspector] public Rigidbody rb;
 
     bool applyForce = false;
@@ -42,6 +43,7 @@ public class BikeAcceleration : MonoBehaviour
             if (applyForce)
             {
                 rb.AddTorque(Vector3.right * torquePower, ForceMode.Impulse);
+                rb.AddForce(Vector3.forward * speedPower, ForceMode.Impulse);
                 applyForce = false;
             }
         }
