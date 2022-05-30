@@ -10,7 +10,6 @@ public class BikeAcceleration : MonoBehaviour
     [HideInInspector] public Rigidbody rb;
 
     bool applyForce = false;
-    bool braking = false;
     string lastButton = "";
 
     // Start is called before the first frame update
@@ -34,21 +33,11 @@ public class BikeAcceleration : MonoBehaviour
                 lastButton = "right";
             }
         }
-        if (Input.GetKey("down"))
-        {
-            braking = true;
-        }
-        else
-        {
-            braking = false;
-        }
-
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(rb.angularVelocity);
         if (!stop)
         {
             if (applyForce)
@@ -56,17 +45,6 @@ public class BikeAcceleration : MonoBehaviour
                 rb.AddTorque(Vector3.right * torquePower, ForceMode.Impulse);
                 rb.AddForce(Vector3.forward * speedPower, ForceMode.Impulse);
                 applyForce = false;
-            }
-            if (braking)
-            {
-                if(rb.angularVelocity.x > 0)
-                {
-                    rb.AddTorque(Vector3.left * torquePower, ForceMode.Force);
-                }
-                if(rb.velocity.z > 0)
-                {
-                    rb.AddForce(Vector3.back * speedPower, ForceMode.Force);
-                }
             }
         }
         else
