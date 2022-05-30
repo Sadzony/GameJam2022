@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FxTemporaire
-  - DeliverableHouse
+  - Ground
+  - HouseLeft
+  - HouseRight
+  - Loader
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Bike
-  - Man
+  - 
+  - 
   - 
   - 
   - 
