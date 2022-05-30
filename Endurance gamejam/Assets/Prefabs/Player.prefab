@@ -182,13 +182,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8995e9a6dd2a71f4e87aa309d94fe779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steeringPower: 2
-  steeringDampener: 1
-  steerMinimum: 5
+  steeringPower: 5
+  steeringDampener: 5
+  steerMinimum: 0
   changeDirectionMultiplier: 2.5
   leaningPower: 1
-  leaningDampener: 10
-  inputPower: 10
+  leaningDampener: 50
+  inputPower: 5
 --- !u!54 &1436956174
 Rigidbody:
   m_ObjectHideFlags: 0
