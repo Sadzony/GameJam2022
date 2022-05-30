@@ -24,11 +24,34 @@ public class NewspaperCannon : MonoBehaviour
             Vector3 dist = housePosition - transform.position;
             dist.y += 4;
             float overrideForce = 4.0f;
-            if (dist.magnitude < range)
+
+            Vector3 origin = transform.position;
+            origin.y += 10;
+
+            Ray ray = new Ray(origin, dist);
+            Debug.DrawRay(ray.origin, ray.direction);
+            if (Physics.Raycast(ray, out RaycastHit hit, range))
             {
-                FireAtObjectiveHouse(housePosition, dist.magnitude * overrideForce);
-                fired = true;
-                Debug.Log("Fire");
+                Debug.Log("House pos: " + housePosition);
+                if (!fired)
+                {
+                    Vector3 hitPos = hit.collider.gameObject.transform.position;
+
+                    Debug.Log("Clean shot?: " + (hitPos == housePosition));
+                    if(!(hitPos == housePosition))
+                    {
+                        Debug.Log("Reason: " + hit.collider.gameObject.name + " Blocking.");
+                    }
+
+                    Debug.Log("In Range?: " + (dist.magnitude < range));
+
+                    if (dist.magnitude < range && hitPos == housePosition)
+                    {
+                        FireAtObjectiveHouse(housePosition, dist.magnitude * overrideForce);
+                        fired = true;
+                        Debug.Log("Fire");
+                    }
+                }
             }
         }
     }

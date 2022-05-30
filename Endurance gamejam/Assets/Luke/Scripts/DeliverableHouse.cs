@@ -17,6 +17,7 @@ public class DeliverableHouse : MonoBehaviour
         if (other.CompareTag("Newspaper"))
         {
             delivered = true;
+            Destroy(other.gameObject);
         }
     }
 

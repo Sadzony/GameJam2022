@@ -40,6 +40,8 @@ public class ObjectiveController : MonoBehaviour
                 deliverableHouse = deliverableHouses[Random.Range(0, deliverableHouses.Length)].GetComponent<DeliverableHouse>();
             }
             prevDeliverableHouse = deliverableHouse;
+
+            Debug.Log("Selected House: " + deliverableHouse.gameObject.name);
         }
     }
 }
