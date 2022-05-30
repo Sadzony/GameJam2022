@@ -14,7 +14,7 @@ public class DeliverableHouse : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Newspaper"))
+        if (other.CompareTag("Newspaper") && objectiveController.deliverableHouse == this)
         {
             delivered = true;
             Destroy(other.gameObject);

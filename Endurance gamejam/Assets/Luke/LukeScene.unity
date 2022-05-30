@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stop: 0
   torquePower: 50
-  speedPower: 35
+  speedPower: 15
   rb: {fileID: 0}
 --- !u!54 &190090216
 Rigidbody:
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 473991929}
   - component: {fileID: 473991928}
   - component: {fileID: 473991927}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 882053909}
   - component: {fileID: 882053908}
   - component: {fileID: 882053907}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,7 +1067,7 @@ GameObject:
   - component: {fileID: 1621819208}
   - component: {fileID: 1621819207}
   - component: {fileID: 1621819206}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893241663}
   - component: {fileID: 1893241664}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1449,7 +1449,7 @@ GameObject:
   - component: {fileID: 2744965049968556785}
   - component: {fileID: 1276709738325996884}
   - component: {fileID: 3914542834562302366}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Bike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 190090216}
   - component: {fileID: 190090217}
   - component: {fileID: 190090214}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1563,7 +1563,7 @@ GameObject:
   - component: {fileID: 503146070}
   - component: {fileID: 692592383}
   - component: {fileID: 6043239583628406646}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: BikePivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9238477, y: 1}
+    m_SensorSize: {x: 2.1213872, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
