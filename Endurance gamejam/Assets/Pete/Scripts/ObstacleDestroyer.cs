@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class ObstacleDestroyer : MonoBehaviour
 {
-    private void Start() { GameObject.Destroy(this, 1); }
+    [SerializeField]
+    private SphereCollider colliderr;
+
+    private void Start() 
+    {
+        colliderr.radius = 10;
+        GameObject.Destroy(this, 1); 
+    }
 
     private void OnTriggerStay(Collider other) { if (other.tag == "Player") { GameObject.Destroy(gameObject); } }
 

@@ -980,21 +980,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485824698}
     m_Modifications:
-    - target: {fileID: 1628655271, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
-      propertyPath: inputPower
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628655271, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
-      propertyPath: steeringPower
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1743156939, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008720151, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
-      propertyPath: torquePower
-      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 3507317433727405331, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
       propertyPath: m_RootOrder

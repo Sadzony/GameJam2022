@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a0edc6df443ff4aa71c67e607efb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderr: {fileID: -1470199028762533976, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
 --- !u!135 &-155701585905157075
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -87,6 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aedab8dead9f0a46beb9fe599cec3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderr: {fileID: -1470199028762533976, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
+  knockbackValue: 100000
 --- !u!1001 &773331931341069361
 PrefabInstance:
   m_ObjectHideFlags: 0
