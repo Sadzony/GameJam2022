@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderr: {fileID: -1470199028762533976, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
-  knockbackValue: 100000
+  knockbackValue: 10000
 --- !u!1001 &773331931341069361
 PrefabInstance:
   m_ObjectHideFlags: 0

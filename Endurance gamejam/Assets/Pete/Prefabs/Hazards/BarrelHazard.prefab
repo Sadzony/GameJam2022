@@ -125,7 +125,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-8792550538888541656
 MonoBehaviour:
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderr: {fileID: -1470199028762533976}
-  knockbackValue: 100000
+  knockbackValue: 10000
 --- !u!1001 &488992445740860469
 PrefabInstance:
   m_ObjectHideFlags: 0
