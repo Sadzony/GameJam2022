@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     CapsuleCollider capsuleCollider;
     Rigidbody rb;
+    NewspaperCannon cannon;
 
     // Forces for leaning and accel.
     public float leanForce = 0.5f;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
         rb = GetComponent<Rigidbody>();
+        cannon = GetComponent<NewspaperCannon>();
     }
 
     // Update is called once per frame
@@ -28,12 +30,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject.FindObjectOfType<ObjectiveController>().GenerateObjective();
+            cannon.Fire(transform.position, 0.0f, 1000);
         }
-
-        //HandleLeaning(KeyCode.LeftArrow, KeyCode.RightArrow);
-        //HandleAcceleration(KeyCode.X, KeyCode.Z);
-        //HandleSteering(); // Broken.
     }
 
     public void HandleLeaning(KeyCode left, KeyCode right)

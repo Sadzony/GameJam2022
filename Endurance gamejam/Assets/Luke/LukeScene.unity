@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 112143434}
   - component: {fileID: 113143434}
   - component: {fileID: 117235434}
+  - component: {fileID: 110948427}
   m_Layer: 0
   m_Name: House_2
   m_TagString: DeliverableHouse
@@ -350,6 +351,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &110948427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110948426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!33 &112143434
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -440,6 +454,7 @@ GameObject:
   - component: {fileID: 133865319}
   - component: {fileID: 132898215}
   - component: {fileID: 128544199}
+  - component: {fileID: 130630504}
   m_Layer: 0
   m_Name: House_3
   m_TagString: DeliverableHouse
@@ -447,6 +462,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &130630504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130630503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!4 &130998087
 Transform:
   m_ObjectHideFlags: 0
@@ -698,6 +726,7 @@ GameObject:
   - component: {fileID: 182385964}
   - component: {fileID: 181387244}
   - component: {fileID: 177016716}
+  - component: {fileID: 183312685}
   m_Layer: 0
   m_Name: MeatShop
   m_TagString: DeliverableHouse
@@ -705,6 +734,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &183312685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183312684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!64 &187355420
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -731,6 +773,7 @@ GameObject:
   - component: {fileID: 192488380}
   - component: {fileID: 191390076}
   - component: {fileID: 187355420}
+  - component: {fileID: 189464509}
   m_Layer: 0
   m_Name: House_1
   m_TagString: DeliverableHouse
@@ -738,6 +781,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &189464509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189464508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!4 &189621148
 Transform:
   m_ObjectHideFlags: 0
@@ -2663,6 +2719,7 @@ GameObject:
   - component: {fileID: 621551448}
   - component: {fileID: 622681496}
   - component: {fileID: 627043832}
+  - component: {fileID: 624935769}
   m_Layer: 0
   m_Name: House_3 (1)
   m_TagString: DeliverableHouse
@@ -2670,6 +2727,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &624935769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624935768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!64 &627043832
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2857,6 +2927,7 @@ GameObject:
   - component: {fileID: 642318839}
   - component: {fileID: 643318583}
   - component: {fileID: 639300439}
+  - component: {fileID: 645586424}
   m_Layer: 0
   m_Name: Office
   m_TagString: DeliverableHouse
@@ -2864,6 +2935,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &645586424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645586423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!4 &645743063
 Transform:
   m_ObjectHideFlags: 0
@@ -3597,6 +3681,7 @@ GameObject:
   - component: {fileID: 904675268}
   - component: {fileID: 905805060}
   - component: {fileID: 901762404}
+  - component: {fileID: 903865285}
   m_Layer: 0
   m_Name: House_2 (1)
   m_TagString: DeliverableHouse
@@ -3604,6 +3689,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &903865285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903865284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!33 &904675268
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4661,6 +4759,7 @@ GameObject:
   - component: {fileID: 1120279773}
   - component: {fileID: 1121410589}
   - component: {fileID: 1117122173}
+  - component: {fileID: 1123401950}
   m_Layer: 0
   m_Name: Market
   m_TagString: DeliverableHouse
@@ -4668,6 +4767,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1123401950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123401949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!1 &1155372259
 GameObject:
   m_ObjectHideFlags: 0
@@ -7072,6 +7184,7 @@ GameObject:
   - component: {fileID: 1602567392}
   - component: {fileID: 1603567136}
   - component: {fileID: 1607913024}
+  - component: {fileID: 1605820641}
   m_Layer: 0
   m_Name: Motel
   m_TagString: DeliverableHouse
@@ -7079,6 +7192,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1605820641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605820640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!64 &1607913024
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7133,6 +7259,7 @@ GameObject:
   - component: {fileID: 1626631705}
   - component: {fileID: 1625631961}
   - component: {fileID: 1621597369}
+  - component: {fileID: 1623699994}
   m_Layer: 0
   m_Name: Market (1)
   m_TagString: DeliverableHouse
@@ -7140,6 +7267,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1623699994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623699993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!23 &1625631961
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7507,6 +7647,7 @@ GameObject:
   - component: {fileID: 1681246952}
   - component: {fileID: 1680115752}
   - component: {fileID: 1684420680}
+  - component: {fileID: 1678120681}
   m_Layer: 0
   m_Name: Hotel_B (1)
   m_TagString: DeliverableHouse
@@ -7514,6 +7655,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1678120681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678120680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!23 &1680115752
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8951,6 +9105,7 @@ GameObject:
   - component: {fileID: 1888825446}
   - component: {fileID: 1887728294}
   - component: {fileID: 1892074182}
+  - component: {fileID: 1889987687}
   m_Layer: 0
   m_Name: House_1 (1)
   m_TagString: DeliverableHouse
@@ -8958,6 +9113,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1889987687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889987686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!64 &1892074182
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9082,6 +9250,7 @@ GameObject:
   - component: {fileID: 1940023222}
   - component: {fileID: 1944115158}
   - component: {fileID: 1937832311}
+  - component: {fileID: 1937832312}
   m_Layer: 0
   m_Name: Hotel_B
   m_TagString: DeliverableHouse
@@ -9102,6 +9271,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.156921, y: 19.147173, z: 12.241923}
   m_Center: {x: 0.13879085, y: 9.568555, z: 0.50596666}
+--- !u!114 &1937832312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937832310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
 --- !u!4 &1938253142
 Transform:
   m_ObjectHideFlags: 0
@@ -11485,6 +11667,7 @@ GameObject:
   - component: {fileID: 2376828917393792162}
   - component: {fileID: 2376828917393792164}
   - component: {fileID: 2376828917393792165}
+  - component: {fileID: 2376828917393792161}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11492,6 +11675,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2376828917393792161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376828917393792160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d306fdf312074cad284e516e17632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &2376828917393792162
 Rigidbody:
   m_ObjectHideFlags: 0
