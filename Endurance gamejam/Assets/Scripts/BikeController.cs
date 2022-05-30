@@ -35,18 +35,18 @@ public class BikeController : MonoBehaviour
         BikeRotate();
 
 
-
+        
     }
 
     private void FixedUpdate()
     {
-        
+
         LeanBike();
     }
 
     private void LateUpdate()
     {
-        
+       
     }
 
     private void MovePedals()
@@ -55,11 +55,18 @@ public class BikeController : MonoBehaviour
         {
             Debug.Log("A was pressed");
             rb.AddForce(Vector3.forward * bikeSpeed);
+            float x = Input.GetAxis("Horizontal") * 15f;
+            Vector3 euler = transform.localEulerAngles;
+            euler.z = Mathf.Lerp(euler.x, x, leanSpeed * Time.deltaTime);
+            transform.localEulerAngles = euler;
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             Debug.Log("D was pressed");
             rb.AddForce(Vector3.forward * bikeSpeed);
+            float z = Input.GetAxis("Horizontal") * 90f;
+            Vector3 euler = transform.localEulerAngles;
+            euler.z = Mathf.Lerp(euler.z, z, leanSpeed * Time.deltaTime);
         }
     }
 
@@ -68,15 +75,13 @@ public class BikeController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             Debug.Log("K was pressed");
-            rb.AddForce(Vector3.right);
-            PivotTo(-eulAngles);
+           
         }
         else if (Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("L was pressed");
-            PivotTo(Vector3.left);
+           
         }
-
     }
 
     private void PivotTo(Vector3 position)
@@ -84,14 +89,14 @@ public class BikeController : MonoBehaviour
         Vector3 offset = transform.position - position;
         foreach(Transform child in transform)
         {
-            child.transform.position += offset * leanSpeed * Time.deltaTime;
+            child.transform.position += offset;
             transform.position = position;
         }
     }
 
     private void LeanBike()
     {
-        
+        PivotTo(eulAngles);
     }
 
 }
