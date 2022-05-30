@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
 
     private KeyCode lastPressedAccelKey;
 
-    public GameObject debug;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,24 +23,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleLeaning(KeyCode.LeftArrow, KeyCode.RightArrow);
-        HandleAcceleration(KeyCode.X, KeyCode.Z);
+        DebugRotate(KeyCode.A, KeyCode.D);
+        DebugMove(KeyCode.W, KeyCode.S);
 
-        // Handle Steering
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject.FindObjectOfType<ObjectiveController>().GenerateObjective();
+        }
 
-        if (transform.rotation.z < 0.1f)
-        {
-            float diff = transform.rotation.z * -1;
-            Quaternion delta = Quaternion.Euler(new Vector3(0, diff * 2, 0) * Time.fixedDeltaTime);
-            rb.MoveRotation(rb.rotation * delta);
-        }
-        else if(transform.rotation.z > 0.1f)
-        {
-            float diff = transform.rotation.z * 1;
-            diff = -diff;
-            Quaternion delta = Quaternion.Euler(new Vector3(0, diff * 2, 0) * Time.fixedDeltaTime);
-            rb.MoveRotation(rb.rotation * delta);
-        }
+        //HandleLeaning(KeyCode.LeftArrow, KeyCode.RightArrow);
+        //HandleAcceleration(KeyCode.X, KeyCode.Z);
+        //HandleSteering(); // Broken.
     }
 
     public void HandleLeaning(KeyCode left, KeyCode right)
@@ -70,6 +61,48 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(transform.forward * accelForce, ForceMode.Impulse);
             lastPressedAccelKey = right;
+        }
+    }
+
+    public void HandleSteering() 
+    {
+        if (transform.rotation.z < 0.1f)
+        {
+            float diff = transform.rotation.z * -1;
+            Quaternion delta = Quaternion.Euler(new Vector3(0, diff * 2, 0) * Time.fixedDeltaTime);
+            rb.MoveRotation(rb.rotation * delta);
+        }
+        else if (transform.rotation.z > 0.1f)
+        {
+            float diff = transform.rotation.z * 1;
+            diff = -diff;
+            Quaternion delta = Quaternion.Euler(new Vector3(0, diff * 2, 0) * Time.fixedDeltaTime);
+            rb.MoveRotation(rb.rotation * delta);
+        }
+    }
+
+    public void DebugRotate(KeyCode left, KeyCode right)
+    {
+        if (Input.GetKey(left))
+        {
+            transform.Rotate(new Vector3(transform.rotation.x, (transform.rotation.y - 10) * Time.fixedDeltaTime, transform.rotation.z));
+        }
+        if (Input.GetKey(right))
+        {
+            transform.Rotate(new Vector3(transform.rotation.x, (transform.rotation.y + 10) * Time.fixedDeltaTime, transform.rotation.z));
+        }
+    }
+
+    public void DebugMove(KeyCode forward, KeyCode backward)
+    {
+        if (Input.GetKey(forward))
+        {
+            rb.AddForce(transform.forward * accelForce, ForceMode.Impulse);
+        }
+
+        if (Input.GetKey(backward))
+        {
+            rb.AddForce(-transform.forward * accelForce, ForceMode.Impulse);
         }
     }
 }
