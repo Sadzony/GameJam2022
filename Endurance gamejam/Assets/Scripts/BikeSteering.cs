@@ -52,7 +52,7 @@ public class BikeSteering : MonoBehaviour
 
         float angleToGround = Vector3.SignedAngle(transform.up, Vector3.right, Vector3.forward);
 
-        if (angleToGround < 0)
+        if (angleToGround < -10)
         {
             //above ground
             if (angle < 0)

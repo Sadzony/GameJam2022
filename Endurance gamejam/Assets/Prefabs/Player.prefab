@@ -124,10 +124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steeringPower: 1
-  steeringDampener: 10
+  steeringDampener: 1
   leaningPower: 1
   leaningDampener: 10
-  inputPower: 5
+  inputPower: 10
 --- !u!54 &1436956174
 Rigidbody:
   m_ObjectHideFlags: 0
