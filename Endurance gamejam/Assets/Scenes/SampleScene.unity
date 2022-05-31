@@ -4187,7 +4187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a78b29b7f2bed429e09cfbb91459e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraParticles: {fileID: 0}
+  cameraParticles: {fileID: 6173743121484462907, guid: f48e9e8b58842d14f9a8dfec5bf66674, type: 3}
   stop: 0
   speedForSparks: 30
   sparking: 0
