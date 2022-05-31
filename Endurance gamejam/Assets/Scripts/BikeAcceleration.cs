@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using Cinemachine;
 public class BikeAcceleration : MonoBehaviour
 {
     public bool stop = false;
@@ -22,6 +22,11 @@ public class BikeAcceleration : MonoBehaviour
     AudioSource audioPedal;
     AudioSource sparkAudio;
 
+    CinemachineVirtualCamera vcam;
+    float fov;
+    float fovTimeStart = 0;
+    float fovTimeStop = 0;
+
     //UI Variables
     [SerializeField] private Image directionArrowLeft;
     [SerializeField] private Image directionArrowRight;
@@ -31,6 +36,8 @@ public class BikeAcceleration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        vcam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
+        fov = vcam.m_Lens.FieldOfView;
         audioPedal = GetComponent<AudioSource>();
         sparkStart = transform.GetChild(0).Find("sparksStart");
         sparkAudio = sparkStart.GetComponent<AudioSource>();
@@ -43,14 +50,14 @@ public class BikeAcceleration : MonoBehaviour
     {
         if (!applyForce)
         {
-            if (Input.GetKeyDown("left") && lastButton != "left")
+            if ((Input.GetKeyDown("left") || Input.GetMouseButtonDown(0)) && lastButton != "left")
             {
                 audioPedal.Play();
                 EnableLeftArrow();
                 applyForce = true;
                 lastButton = "left";
             }
-            else if (Input.GetKeyDown("right") && lastButton != "right")
+            else if ((Input.GetKeyDown("right") || Input.GetMouseButtonDown(1)) && lastButton != "right")
             {
                 audioPedal.Play();
                 EnableRightArrow();
@@ -85,11 +92,11 @@ public class BikeAcceleration : MonoBehaviour
             {
                 if (rb.angularVelocity.x > 0)
                 {
-                    rb.AddTorque(Vector3.left * torquePower, ForceMode.Force);
+                    rb.AddTorque(Vector3.left * torquePower * (Mathf.Abs(rb.angularVelocity.x) / 5), ForceMode.Force);
                 }
                 if (rb.velocity.z > 0)
                 {
-                    rb.AddForce(Vector3.back * speedPower, ForceMode.Force);
+                    rb.AddForce(Vector3.back * speedPower * (Mathf.Abs(rb.velocity.z) / 5), ForceMode.Force);
                     if (!coroutineRunning)
                     {
                         StartCoroutine(sparks());
@@ -103,6 +110,9 @@ public class BikeAcceleration : MonoBehaviour
         }
         if(rb.velocity.z > speedForSparks)
         {
+            fovTimeStop = 0;
+            fovTimeStart += Time.deltaTime;
+            vcam.m_Lens.FieldOfView = Mathf.Lerp(vcam.m_Lens.FieldOfView, fov + 10, fovTimeStart);
             if (!coroutineRunning)
             {
                 StartCoroutine(sparks());
@@ -110,6 +120,9 @@ public class BikeAcceleration : MonoBehaviour
         }
         else
         {
+            fovTimeStart = 0;
+            fovTimeStop += Time.deltaTime;
+            vcam.m_Lens.FieldOfView = Mathf.Lerp(vcam.m_Lens.FieldOfView, fov, fovTimeStop);
             sparking = false;
         }
         if (!coroutineRunning)
