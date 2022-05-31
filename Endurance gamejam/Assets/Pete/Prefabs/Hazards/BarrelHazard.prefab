@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &7721232402417179343
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187561875922116071}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &528095253639697422
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822023643189554497}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &1316012275399561166
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022895298486195091}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &1521013081881655620
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414029752556820922}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8785571411330072868
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,9 +73,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6714253518549266428}
+  - component: {fileID: 4980900514426744409}
+  - component: {fileID: -1470199028762533976}
+  - component: {fileID: -8792550538888541656}
   m_Layer: 0
   m_Name: BarrelHazard
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +101,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4980900514426744409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785571411330072868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a0edc6df443ff4aa71c67e607efb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderr: {fileID: -1470199028762533976}
+--- !u!135 &-1470199028762533976
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785571411330072868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: -0.45699215, y: 0.6615169, z: -0.043905735}
+--- !u!114 &-8792550538888541656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785571411330072868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aedab8dead9f0a46beb9fe599cec3c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderr: {fileID: -1470199028762533976}
+  knockbackValue: 10000
 --- !u!1001 &488992445740860469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41,6 +148,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6714253518549266428}
     m_Modifications:
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
       value: Barrel (3)
@@ -67,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030287476052, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030287476052, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -103,6 +218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+--- !u!1 &4822023643189554497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+  m_PrefabInstance: {fileID: 488992445740860469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4822023643189916001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4909492030287476052, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
@@ -115,6 +235,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6714253518549266428}
     m_Modifications:
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
       value: Barrel (1)
@@ -177,6 +305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+--- !u!1 &6022895298486195091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+  m_PrefabInstance: {fileID: 1709005696940456679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6022895298486226867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4909492030287476052, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
@@ -189,6 +322,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6714253518549266428}
     m_Modifications:
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
       value: Barrel
@@ -251,6 +392,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+--- !u!1 &8414029752556820922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+  m_PrefabInstance: {fileID: 3523687954282541262}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8414029752556324250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4909492030287476052, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
@@ -263,6 +409,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6714253518549266428}
     m_Modifications:
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
       value: Barrel (2)
@@ -325,6 +479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+--- !u!1 &3187561875922116071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+  m_PrefabInstance: {fileID: 7502568574146884755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3187561875922338247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4909492030287476052, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
