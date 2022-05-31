@@ -7,13 +7,13 @@ using TMPro;
 public class ListTest : MonoBehaviour
 {
 
-    public List<int> List = new List<int>();
+    public static  List<int> List = new List<int>();
 
-    int[] Array = new int[10];
+    public static int[] Array = new int[10];
 
     public int Score = 0;
 
-    public int HighScore = 0;
+    static public int HighScore = 0;
 
     [SerializeField] private ScoreController scoreControl;
     [SerializeField] private TMP_Text scoreText;
@@ -26,7 +26,7 @@ public class ListTest : MonoBehaviour
 
         Score = 0;
 
-        HighScore = 0;
+        
     }
 
     // Update is called once per frame
@@ -35,44 +35,40 @@ public class ListTest : MonoBehaviour
         Score = scoreControl.score;
         scoreText.text = Score.ToString();
 
-        if (Input.GetKeyDown(KeyCode.E))
+    }
+
+
+    public void CalculateOrder()
+    {
+
+
+        HighScore = Score;
+        
+        List.Add(Score);
+
+        List.Sort();
+
+        List.Reverse();
+
+        Array = List.ToArray();
+
+        Debug.Log("New Highest value is : " + Array[0]);
+
+        HighScore = Array[0];
+
+
+        if (List.Count >= 10)
         {
 
-            if (Score >= HighScore)
-            {
-
-
-                    HighScore = Score;
-
-
-                
-                
-            }
-
-                    List.Add(Score);
-
-                    List.Sort();
-
-                    List.Reverse();
-
-                    Array = List.ToArray();
-
-                    Debug.Log("New Highest value is : " + Array[0]);
-
-                    HighScore = Array[0];
-
-
-            if (List.Count >= 10)
-            {
-
-                List.RemoveAt(10);
-
-            }
-
-            Score = 0;
+            List.RemoveAt(10);
 
         }
 
+        Score = 0;
+
 
     }
+
+
+
 }
