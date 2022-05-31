@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 6375165119869519720}
   - component: {fileID: 6375165119870649768}
   - component: {fileID: 6375165119866566088}
+  - component: {fileID: 7299082324002762359}
+  - component: {fileID: 2958905848453957368}
   m_Layer: 0
   m_Name: AutoShopScaled
-  m_TagString: Untagged
+  m_TagString: DeliverableHouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +110,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: f35eaa239a6dfa2459bc8e90cff947fb, type: 3}
+--- !u!114 &7299082324002762359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375165119872850792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
+--- !u!65 &2958905848453957368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375165119872850792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.05672, y: 4.8074837, z: 7.05672}
+  m_Center: {x: 0.37069368, y: 2.4039907, z: 0.30169404}
 --- !u!1001 &1640623749009413143
 PrefabInstance:
   m_ObjectHideFlags: 0
