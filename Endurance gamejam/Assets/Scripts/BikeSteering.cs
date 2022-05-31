@@ -28,10 +28,13 @@ public class BikeSteering : MonoBehaviour
     Quaternion startRotation;
     Quaternion currentRotation;
 
+    
+
     Vector3 offset;
 
     void Start()
     {
+        
         steeringRigidbody = GetComponent<Rigidbody>();
         accelerationRigidbody = transform.parent.GetComponent<Rigidbody>();
         accelerationScript = transform.parent.GetComponent<BikeAcceleration>();
