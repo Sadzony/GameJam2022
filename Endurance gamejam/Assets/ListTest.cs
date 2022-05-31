@@ -32,8 +32,15 @@ public class ListTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Score = scoreControl.score;
-        scoreText.text = Score.ToString();
+        try
+        {
+            Score = scoreControl.score;
+            scoreText.text = Score.ToString();
+        }
+        catch
+        {
+            Debug.Log("No score");
+        }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
