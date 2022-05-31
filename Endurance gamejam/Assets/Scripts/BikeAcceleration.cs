@@ -5,6 +5,9 @@ using UnityEngine;
 public class BikeAcceleration : MonoBehaviour
 {
     public bool stop = false;
+    public float speedForSparks;
+    public GameObject sparksPrefab;
+    private Transform sparkStart;
     [SerializeField] private float torquePower;
     [SerializeField] private float speedPower;
     [HideInInspector] public Rigidbody rb;
@@ -13,9 +16,12 @@ public class BikeAcceleration : MonoBehaviour
     bool braking = false;
     string lastButton = "";
 
+    bool coroutineRunning = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        sparkStart = transform.GetChild(0).Find("sparksStart");
         rb = GetComponent<Rigidbody>();
     }
 
@@ -65,6 +71,10 @@ public class BikeAcceleration : MonoBehaviour
                 if (rb.velocity.z > 0)
                 {
                     rb.AddForce(Vector3.back * speedPower, ForceMode.Force);
+                    if (!coroutineRunning)
+                    {
+                        StartCoroutine(sparks());
+                    }
                 }
             }
         }
@@ -72,5 +82,19 @@ public class BikeAcceleration : MonoBehaviour
         {
             rb.angularVelocity = new Vector3(0, 0, 0);
         }
+        if(rb.velocity.z > speedForSparks)
+        {
+            if (!coroutineRunning)
+            {
+                StartCoroutine(sparks());
+            }
+        }
+    }
+    IEnumerator sparks()
+    {
+        coroutineRunning = true;
+        Instantiate(sparksPrefab, sparkStart);
+        yield return new WaitForSeconds(0.1f);
+        coroutineRunning = false;
     }
 }

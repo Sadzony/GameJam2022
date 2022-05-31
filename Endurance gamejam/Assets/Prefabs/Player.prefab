@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1743156938
+--- !u!1 &2864038413430794473
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1743156939}
-  - component: {fileID: 1743156941}
-  - component: {fileID: 1743156940}
+  - component: {fileID: 7635403124049043718}
+  - component: {fileID: 3668074682850980392}
+  - component: {fileID: 4212663920449905693}
   m_Layer: 0
   m_Name: TileDestroyer
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1743156939
+--- !u!4 &7635403124049043718
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743156938}
+  m_GameObject: {fileID: 2864038413430794473}
   m_LocalRotation: {x: -0, y: -0, z: -0.06045583, w: 0.9981709}
   m_LocalPosition: {x: 0.10862143, y: 0.8934212, z: -52.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,31 +32,61 @@ Transform:
   m_Father: {fileID: 4726410246440147571}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1743156941
+--- !u!65 &3668074682850980392
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743156938}
+  m_GameObject: {fileID: 2864038413430794473}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 30, y: 30, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1743156940
+--- !u!114 &4212663920449905693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743156938}
+  m_GameObject: {fileID: 2864038413430794473}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5792786d5410fa641a5a624817f1ddb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3318343021153538130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3453799225429546224}
+  m_Layer: 6
+  m_Name: sparksStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3453799225429546224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318343021153538130}
+  m_LocalRotation: {x: 0.06045583, y: 0.9981709, z: -0.000000035133617, w: 0.0000005800823}
+  m_LocalPosition: {x: 0.10915006, y: 0.44205797, z: -1.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4726410246440147571}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &5935406398452302103
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stop: 0
+  speedForSparks: 30
+  sparksPrefab: {fileID: 100000, guid: facf937845fb61946bf9765331582518, type: 3}
   torquePower: 50
   speedPower: 35
   rb: {fileID: 0}
@@ -166,7 +198,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2744965048703308288}
-  - {fileID: 1743156939}
+  - {fileID: 7635403124049043718}
+  - {fileID: 3453799225429546224}
   m_Father: {fileID: 3507317433727405331}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.932}
