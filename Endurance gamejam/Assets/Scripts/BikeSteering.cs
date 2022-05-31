@@ -72,7 +72,6 @@ public class BikeSteering : MonoBehaviour
                 }
                 AddTorqueRight(accelerationRigidbody, steeringTorque);
                 AddTorqueRight(steeringRigidbody, leaningTorque);
-                AddSpeedRight(accelerationRigidbody, steeringTorque / 2);
             }
             else
             {
@@ -82,7 +81,6 @@ public class BikeSteering : MonoBehaviour
                 }
                 AddTorqueLeft(accelerationRigidbody, steeringTorque);
                 AddTorqueLeft(steeringRigidbody, leaningTorque);
-                AddSpeedLeft(accelerationRigidbody, steeringTorque / 2);
             }
 
             //input steering
@@ -106,13 +104,5 @@ public class BikeSteering : MonoBehaviour
     public void AddTorqueRight(Rigidbody rb, float power)
     {
         rb.AddTorque(Vector3.back * power);
-    }
-    public void AddSpeedLeft(Rigidbody rb, float power)
-    {
-        rb.AddForce(Vector3.left * power);
-    }
-    public void AddSpeedRight(Rigidbody rb, float power)
-    {
-        rb.AddForce(Vector3.right * power);
     }
 }
