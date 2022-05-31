@@ -20,7 +20,6 @@ public class Newspaper : MonoBehaviour
             // We have missed the target.
             Destroy(this);
 
-            Debug.Log("Newspaper Missed. Killing");
         }
     }
     private void OnDestroy()
