@@ -8,12 +8,7 @@ public class NotifyToLoadNewLevel : MonoBehaviour
     [SerializeField]
     private float NewTileSpawnOffset = 50.0f;
 
-    private void Start() { 
-
-        if (!Generator) {
-            Generator = GameObject.Find("LevelGeneratorPrefabDONTCHANGENAME"); 
-        }
-    }
+    private void Start() { if (!Generator) { Generator = GameObject.Find("LevelGeneratorPrefabDONTCHANGENAME"); } }
 
     private void OnTriggerEnter(Collider other)
     {

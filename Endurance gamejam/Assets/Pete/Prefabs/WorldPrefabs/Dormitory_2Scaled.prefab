@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 5083988011134016383}
   - component: {fileID: 5083988011133016511}
   - component: {fileID: 5083988011128924639}
-  - component: {fileID: 7844921878145966146}
-  - component: {fileID: 6002297665276198459}
   m_Layer: 0
   m_Name: Dormitory_2Scaled
-  m_TagString: DeliverableHouse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,29 +97,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 92eedd788d8ded746b3e6a5d4b1e7fa0, type: 3}
---- !u!114 &7844921878145966146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5083988011131012991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delivered: 0
---- !u!65 &6002297665276198459
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5083988011131012991}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.72, y: 7.9440594, z: 4.6}
-  m_Center: {x: 0.057077646, y: 3.97253, z: 0.45678014}

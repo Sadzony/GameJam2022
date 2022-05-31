@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 8008084745274534320}
   - component: {fileID: 8008084745273568112}
   - component: {fileID: 8008084745269533456}
-  - component: {fileID: -8894718396790095995}
-  - component: {fileID: 7338550230055668963}
   m_Layer: 0
   m_Name: OfficeScaled
-  m_TagString: DeliverableHouse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,29 +97,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: dcb6ef7cddaafc64583170e642ceb2d2, type: 3}
---- !u!114 &-8894718396790095995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008084745275831728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delivered: 0
---- !u!65 &7338550230055668963
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008084745275831728}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.335209, y: 13.679032, z: 11.604308}
-  m_Center: {x: 0.03743148, y: 6.8387246, z: 0.30478048}

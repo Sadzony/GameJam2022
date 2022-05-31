@@ -8,7 +8,6 @@ TagManager:
   - HouseLeft
   - HouseRight
   - Loader
-  - DeliverableHouse
   - Hazard
   - FxTemporaire
   layers:
@@ -18,12 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Particle
+  - 
   - Bike
   - Man
-  - 
-  - 
-  - 
   - 
   - 
   - 
