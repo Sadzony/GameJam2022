@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2319335485367540158}
   - component: {fileID: 3808121811798905580}
-  - component: {fileID: 3128056918548726864}
-  - component: {fileID: -4585623186579311639}
   m_Layer: 0
   m_Name: TrashPile
   m_TagString: Hazard
@@ -48,34 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a0edc6df443ff4aa71c67e607efb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderr: {fileID: -1470199028762533976, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
---- !u!135 &3128056918548726864
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2360672353538864226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.6549315
-  m_Center: {x: 0.8591633, y: 1.5436902, z: -1.5098667}
---- !u!114 &-4585623186579311639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2360672353538864226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aedab8dead9f0a46beb9fe599cec3c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliderr: {fileID: -1470199028762533976, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
-  knockbackValue: 10000
+  colliderr: {fileID: 0}
 --- !u!54 &2458935275805939183
 Rigidbody:
   m_ObjectHideFlags: 0

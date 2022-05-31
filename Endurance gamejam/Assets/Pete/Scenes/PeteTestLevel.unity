@@ -839,6 +839,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626227757, guid: c67931eadee12684e83915885554a31f, type: 3}
+      propertyPath: m_XDamping
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626227757, guid: c67931eadee12684e83915885554a31f, type: 3}
+      propertyPath: m_YDamping
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626227757, guid: c67931eadee12684e83915885554a31f, type: 3}
+      propertyPath: m_ZDamping
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7231454664942257854, guid: c67931eadee12684e83915885554a31f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.269162
@@ -980,6 +992,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485824698}
     m_Modifications:
+    - target: {fileID: 1436956174, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1743156939, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
       propertyPath: m_RootOrder
       value: 2

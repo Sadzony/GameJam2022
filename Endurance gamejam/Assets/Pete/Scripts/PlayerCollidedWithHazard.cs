@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class PlayerCollidedWithHazard : MonoBehaviour
 {
-    [SerializeField]
-    private SphereCollider colliderr;
     private bool canGetKnockedback = false;
     [SerializeField]
     private float knockbackValue = 100;
-
-    private void Awake() { StartCoroutine(timer()); }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,13 +19,6 @@ public class PlayerCollidedWithHazard : MonoBehaviour
                 other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(0, knockbackValue), Random.Range(0, knockbackValue), Random.Range(0, -knockbackValue)), ForceMode.Impulse);  
             }
         }
-    }
-
-    IEnumerator timer()
-    { 
-        yield return new WaitForSeconds(1);
-        colliderr.radius = 1;
-        canGetKnockedback = true;
     }
 
 } // class
