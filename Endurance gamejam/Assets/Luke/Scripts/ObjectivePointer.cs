@@ -8,7 +8,7 @@ public class ObjectivePointer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = GameObject.FindObjectOfType<ObjectiveController>();
+        controller = FindObjectOfType<ObjectiveController>();
     }
 
     // Update is called once per frame
