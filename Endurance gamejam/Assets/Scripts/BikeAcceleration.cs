@@ -114,7 +114,7 @@ public class BikeAcceleration : MonoBehaviour
         }
         if (!coroutineRunning)
         {
-            sparkAudio.Stop();
+            sparkAudio.Stop(); 
         }
     }
     IEnumerator sparks()
