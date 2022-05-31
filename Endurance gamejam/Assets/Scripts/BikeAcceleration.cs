@@ -8,6 +8,7 @@ public class BikeAcceleration : MonoBehaviour
 {
     public bool stop = false;
     public float speedForSparks;
+    [HideInInspector] public bool sparking = false;
     public GameObject sparksPrefab;
     private Transform sparkStart;
     [SerializeField] private float torquePower;
@@ -18,7 +19,8 @@ public class BikeAcceleration : MonoBehaviour
     bool braking = false;
     string lastButton = "";
 
-
+    AudioSource audioPedal;
+    AudioSource sparkAudio;
 
     //UI Variables
     [SerializeField] private Image directionArrowLeft;
@@ -29,7 +31,9 @@ public class BikeAcceleration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioPedal = GetComponent<AudioSource>();
         sparkStart = transform.GetChild(0).Find("sparksStart");
+        sparkAudio = sparkStart.GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         directionArrowLeft.enabled = false;
         directionArrowRight.enabled = false;
@@ -41,12 +45,14 @@ public class BikeAcceleration : MonoBehaviour
         {
             if (Input.GetKeyDown("left") && lastButton != "left")
             {
+                audioPedal.Play();
                 EnableLeftArrow();
                 applyForce = true;
                 lastButton = "left";
             }
             else if (Input.GetKeyDown("right") && lastButton != "right")
             {
+                audioPedal.Play();
                 EnableRightArrow();
                 applyForce = true;
                 lastButton = "right";
@@ -102,9 +108,25 @@ public class BikeAcceleration : MonoBehaviour
                 StartCoroutine(sparks());
             }
         }
+        else
+        {
+            sparking = false;
+        }
+        if (!coroutineRunning)
+        {
+            sparkAudio.Stop(); 
+        }
     }
     IEnumerator sparks()
     {
+        if (!sparkAudio.isPlaying)
+        {
+            sparkAudio.Play();
+        }
+        if (!braking)
+        {
+            sparking = true;
+        }
         coroutineRunning = true;
         Instantiate(sparksPrefab, sparkStart);
         yield return new WaitForSeconds(0.1f);

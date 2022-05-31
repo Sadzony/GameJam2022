@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7610598992148543286}
   - component: {fileID: 6872977244028506401}
   - component: {fileID: 5674908820494768291}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Newspaper
   m_TagString: Newspaper
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 873186912228585905}
   - component: {fileID: 7317164855189146953}
   - component: {fileID: 653063564093454195}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Newspaper
   m_Icon: {fileID: 0}
