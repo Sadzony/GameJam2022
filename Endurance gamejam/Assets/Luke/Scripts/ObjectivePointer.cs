@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectivePointer : MonoBehaviour
 {
     ObjectiveController controller;
+    Vector3 offsetHousePos;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,8 @@ public class ObjectivePointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(controller.deliverableHouse.transform);
+        offsetHousePos = controller.deliverableHouse.transform.position;
+        offsetHousePos.y = controller.deliverableHouse.GetComponent<BoxCollider>().bounds.size.y / 2;
+        transform.LookAt(offsetHousePos);
     }
 }

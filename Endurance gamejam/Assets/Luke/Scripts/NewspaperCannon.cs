@@ -6,10 +6,14 @@ public class NewspaperCannon : MonoBehaviour
 {
     public GameObject newspaperPrefab;
     public Transform cannonMuzzle;
+    public ParticleSystem cannonFireFX;
     public float range;
+
     private ObjectiveController objectiveController;
     private ObjectivePointer objectivePointer;
     private PersonExplode personExploder;
+    private ParticleSystem cannonFireInstance;
+    private Rigidbody playerRB;
     private bool fired;
 
     private void Start()
@@ -17,6 +21,7 @@ public class NewspaperCannon : MonoBehaviour
         objectiveController = FindObjectOfType<ObjectiveController>();
         objectivePointer = GetComponent<ObjectivePointer>();
         personExploder = GetComponentInParent<PersonExplode>();
+        playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
         fired = false;
     }
 
@@ -32,9 +37,9 @@ public class NewspaperCannon : MonoBehaviour
 
         if (!fired)
         {
+            housePosition.y = objectiveController.deliverableHouse.GetComponent<BoxCollider>().bounds.size.y / 2;
             Vector3 dist = housePosition - transform.position;
-            dist.y += 4;
-            float overrideForce = 4.0f;
+            float overrideForce = 1.25f;
 
             Ray ray = new Ray(transform.position, dist);
 
@@ -61,6 +66,13 @@ public class NewspaperCannon : MonoBehaviour
 
     private void FireAtObjectiveHouse(Vector3 housePos, float force)
     {
+        cannonFireInstance = Instantiate(cannonFireFX);
+        cannonFireInstance.transform.position = cannonMuzzle.transform.position;
+        cannonFireInstance.transform.parent = cannonMuzzle.transform;
+        cannonFireInstance.transform.Rotate(new Vector3(90, 0, 0));
+        cannonFireInstance.Play();
+
+        // Shoot the actual newspaper.
         Vector3 toHouse = housePos - transform.position;
         GameObject newspaper = Instantiate(newspaperPrefab);
 
