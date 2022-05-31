@@ -9,6 +9,8 @@ public class ObjectiveController : MonoBehaviour
     [HideInInspector]
     public DeliverableHouse deliverableHouse;
 
+    private DeliverableHouse prevDeliverableHouse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,14 @@ public class ObjectiveController : MonoBehaviour
 
     public void GenerateObjective()
     {
-        deliverableHouse = deliverableHouses[Random.Range(0, deliverableHouses.Length)].GetComponent<DeliverableHouse>();
+        deliverableHouses = GameObject.FindGameObjectsWithTag("DeliverableHouse");
+        if(deliverableHouses.Length > 0)
+        {
+            while (deliverableHouse == prevDeliverableHouse)
+            {
+                deliverableHouse = deliverableHouses[Random.Range(0, deliverableHouses.Length)].GetComponent<DeliverableHouse>();
+            }
+            prevDeliverableHouse = deliverableHouse;
+        }
     }
 }

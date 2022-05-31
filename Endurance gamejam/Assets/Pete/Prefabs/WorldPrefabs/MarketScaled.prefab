@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 1268772362188715143}
   - component: {fileID: 1268772362187585095}
   - component: {fileID: 1268772362191668775}
+  - component: {fileID: 4385856265885813059}
+  - component: {fileID: 1941782796516060108}
   m_Layer: 0
   m_Name: MarketScaled
-  m_TagString: Untagged
+  m_TagString: DeliverableHouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +99,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 660ae124d224d4b48b5c9470fb1ebd1d, type: 3}
+--- !u!114 &4385856265885813059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268772362189580423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
+--- !u!65 &1941782796516060108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268772362189580423}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9, y: 3.319787, z: 7}
+  m_Center: {x: 0.0012540817, y: 1.6622243, z: -0.5681008}
