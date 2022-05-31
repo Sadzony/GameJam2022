@@ -102,8 +102,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4550734, y: 2.4117165, z: 3.8226316}
-  m_Center: {x: -0.11345357, y: 0.70585823, z: 0.103488564}
+  m_Size: {x: 2.5790071, y: 2.4117165, z: 3.5202696}
+  m_Center: {x: -0.038431883, y: 0.70585823, z: 0.09753764}
 --- !u!114 &7518820594075056660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackValue: 1000
-  collidedFX: {fileID: 8410557287937581580, guid: f99e3d25a521669429ced85f3f22a0cb, type: 3}
+  collidedFX: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50, type: 3}
 --- !u!1001 &5817902166079355426
 PrefabInstance:
   m_ObjectHideFlags: 0

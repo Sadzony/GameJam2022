@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackValue: 1000
-  collidedFX: {fileID: 8410557287937581580, guid: f99e3d25a521669429ced85f3f22a0cb, type: 3}
+  collidedFX: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50, type: 3}
 --- !u!65 &5224850259689580492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -195,8 +195,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.323742, y: 4.5798965, z: 12.630351}
-  m_Center: {x: -0.31642246, y: 1.7899482, z: -1.0185571}
+  m_Size: {x: 7.705883, y: 4.5798965, z: 7.202061}
+  m_Center: {x: -1.0708499, y: 1.7899482, z: -0.75100255}
 --- !u!54 &9092815321780383061
 Rigidbody:
   m_ObjectHideFlags: 0
