@@ -17,14 +17,19 @@ public class PlayerCollidedWithHazard : MonoBehaviour
     {
         if (canGetKnockedback) 
         {
-            if (other.tag == "Player") { other.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(new Vector3(Random.Range(0, knockbackValue), Random.Range(0, knockbackValue), Random.Range(0, knockbackValue)), other.gameObject.transform.position);  }
+            if (other.tag == "Player") 
+            {
+                other.gameObject.GetComponent<BikeAcceleration>().stop = true;
+                other.transform.GetChild(0).GetComponent<BikeSteering>().enabled = false;
+                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(0, knockbackValue), Random.Range(0, knockbackValue), Random.Range(0, -knockbackValue)), ForceMode.Impulse);  
+            }
         }
     }
 
     IEnumerator timer()
     { 
         yield return new WaitForSeconds(1);
-        colliderr.radius = 2;
+        colliderr.radius = 1;
         canGetKnockedback = true;
     }
 

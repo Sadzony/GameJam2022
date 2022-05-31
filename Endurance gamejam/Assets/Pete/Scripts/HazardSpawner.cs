@@ -9,7 +9,7 @@ public class HazardSpawner : MonoBehaviour
     [SerializeField]
     private GameObject[] Hazards;
     [SerializeField]
-    private float SpawnPercentage = 5;
+    private float SpawnPercentage = 10;
 
     private void Awake() { if (!_collider) { _collider = GetComponent<BoxCollider>(); } }
 

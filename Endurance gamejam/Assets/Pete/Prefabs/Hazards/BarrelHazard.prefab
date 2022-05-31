@@ -125,8 +125,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1
+  m_Center: {x: -0.45699215, y: 0.6615169, z: -0.043905735}
 --- !u!114 &-8792550538888541656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +151,10 @@ PrefabInstance:
     - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
@@ -235,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
       value: Barrel (1)
@@ -318,6 +326,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
       value: Barrel
@@ -400,6 +412,10 @@ PrefabInstance:
     - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name

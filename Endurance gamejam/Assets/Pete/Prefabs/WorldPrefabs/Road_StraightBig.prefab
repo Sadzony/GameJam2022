@@ -255,4 +255,4 @@ MonoBehaviour:
   - {fileID: 3813886899619782505, guid: 9e42e5eb82ff39d43956451cca10e479, type: 3}
   - {fileID: 3619200930047779935, guid: 37830472f1c09f142812c9be6e3dd0db, type: 3}
   - {fileID: 8785571411330072868, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
-  SpawnPercentage: 100
+  SpawnPercentage: 25
