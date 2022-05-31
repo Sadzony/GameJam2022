@@ -8,7 +8,9 @@ TagManager:
   - HouseLeft
   - HouseRight
   - Loader
+  - DeliverableHouse
   - Hazard
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -16,6 +18,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Particle
+  - Bike
+  - Man
   - 
   - 
   - 
