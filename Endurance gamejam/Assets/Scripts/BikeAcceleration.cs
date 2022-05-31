@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using Cinemachine;
 public class BikeAcceleration : MonoBehaviour
 {
+    public GameObject cameraParticles;
     public bool stop = false;
     public float speedForSparks;
     [HideInInspector] public bool sparking = false;
@@ -26,6 +27,9 @@ public class BikeAcceleration : MonoBehaviour
     float fov;
     float fovTimeStart = 0;
     float fovTimeStop = 0;
+
+
+    private GameObject cameraParticlesInstance;
 
     //UI Variables
     [SerializeField] private Image directionArrowLeft;
@@ -123,6 +127,10 @@ public class BikeAcceleration : MonoBehaviour
             fovTimeStart = 0;
             fovTimeStop += Time.deltaTime;
             vcam.m_Lens.FieldOfView = Mathf.Lerp(vcam.m_Lens.FieldOfView, fov, fovTimeStop);
+            if (cameraParticlesInstance != null)
+            {
+                Destroy(cameraParticlesInstance);
+            }
             sparking = false;
         }
         if (!coroutineRunning)
@@ -138,6 +146,10 @@ public class BikeAcceleration : MonoBehaviour
         }
         if (!braking)
         {
+            if (cameraParticlesInstance == null)
+            {
+                cameraParticlesInstance = Instantiate(cameraParticles, sparkStart);
+            }
             sparking = true;
         }
         coroutineRunning = true;
