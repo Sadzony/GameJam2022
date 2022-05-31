@@ -25,15 +25,11 @@ public class PersonExplode : MonoBehaviour
         if (!exploded)
         {
             Debug.Log("Died");
-
-            transform.parent.parent.parent = transform;
             foreach (Rigidbody childRB in childRbs)
             {
                 childRB.constraints = RigidbodyConstraints.None;
                 childRB.velocity = rb.velocity;
             }
-            rb.AddExplosionForce(rb.velocity.magnitude, transform.forward, 100);
-
             exploded = true;
         }
     }

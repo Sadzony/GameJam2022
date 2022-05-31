@@ -8,17 +8,27 @@ public class NewspaperCannon : MonoBehaviour
     public Transform cannonMuzzle;
     public float range;
     private ObjectiveController objectiveController;
+    private ObjectivePointer objectivePointer;
+    private PersonExplode personExploder;
     private bool fired;
 
     private void Start()
     {
         objectiveController = FindObjectOfType<ObjectiveController>();
+        objectivePointer = GetComponent<ObjectivePointer>();
+        personExploder = GetComponentInParent<PersonExplode>();
         fired = false;
     }
 
     private void Update()
     {
         Vector3 housePosition = objectiveController.deliverableHouse.gameObject.transform.position;
+
+        if (personExploder.exploded)
+        {
+            objectivePointer.enabled = false;
+            return;
+        }
 
         if (!fired)
         {
