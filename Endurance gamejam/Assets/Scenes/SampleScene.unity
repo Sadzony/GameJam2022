@@ -4021,6 +4021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stop: 0
   speedForSparks: 30
+  sparking: 0
   sparksPrefab: {fileID: 100000, guid: facf937845fb61946bf9765331582518, type: 3}
   torquePower: 50
   speedPower: 35
@@ -4100,7 +4101,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 918670903767676851, guid: 301f24c4dee4f414aafb6a793196ad5c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 918670903767676851, guid: 301f24c4dee4f414aafb6a793196ad5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4615,7 +4616,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9238477, y: 1}
+    m_SensorSize: {x: 2.1213872, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6523,7 +6524,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8290860318217584530, guid: 4dd55ba4cef6db84e98f66dd82a43b85, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8290860318217584530, guid: 4dd55ba4cef6db84e98f66dd82a43b85, type: 3}
       propertyPath: m_LocalPosition.x
