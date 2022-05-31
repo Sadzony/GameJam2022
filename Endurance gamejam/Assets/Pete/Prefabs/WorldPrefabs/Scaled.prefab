@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4592763846989999004}
   - component: {fileID: 4592763846988999004}
   - component: {fileID: 4592763846993353020}
+  - component: {fileID: -2986841017351679134}
+  - component: {fileID: 7102073089544398755}
   m_Layer: 0
   m_Name: Scaled
-  m_TagString: Untagged
+  m_TagString: DeliverableHouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +99,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e47f924ef5ef44848b7eb64d54639939, type: 3}
+--- !u!114 &-2986841017351679134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592763846991263644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc536a13fa2ab442bd6597aef39450c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delivered: 0
+--- !u!65 &7102073089544398755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592763846991263644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 9.084948, z: 7.0000005}
+  m_Center: {x: 0, y: 4.5424757, z: 0.76921964}
