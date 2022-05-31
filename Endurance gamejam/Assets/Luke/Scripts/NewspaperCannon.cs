@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewspaperCannon : MonoBehaviour
 {
     public GameObject newspaperPrefab;
+    public Transform cannonMuzzle;
     public float range;
     private ObjectiveController objectiveController;
     private bool fired;
@@ -51,10 +52,9 @@ public class NewspaperCannon : MonoBehaviour
     private void FireAtObjectiveHouse(Vector3 housePos, float force)
     {
         Vector3 toHouse = housePos - transform.position;
-        toHouse.y += 2;
         GameObject newspaper = Instantiate(newspaperPrefab);
 
-        newspaper.transform.position = transform.position;
+        newspaper.transform.position = cannonMuzzle.position;
         Rigidbody rb = newspaper.GetComponent<Rigidbody>();
 
         Newspaper newpaperScript = newspaper.GetComponent<Newspaper>();
