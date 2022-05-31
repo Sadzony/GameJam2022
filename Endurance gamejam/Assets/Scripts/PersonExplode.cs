@@ -6,7 +6,7 @@ public class PersonExplode : MonoBehaviour
 {
     private Rigidbody rb;
     private Rigidbody[] childRbs;
-    public bool exploded;
+    [HideInInspector] public bool exploded;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,7 @@ public class PersonExplode : MonoBehaviour
         if (!exploded)
         {
             Debug.Log("Died");
+            transform.parent = transform.parent.parent.parent;
             foreach (Rigidbody childRB in childRbs)
             {
                 childRB.constraints = RigidbodyConstraints.None;

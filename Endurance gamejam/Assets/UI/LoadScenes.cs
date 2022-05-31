@@ -40,7 +40,7 @@ public class LoadScenes : MonoBehaviour
     public void Play()
     {
             
-      SceneManager.LoadScene("PeteTestLevel", LoadSceneMode.Single);  
+      SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);  
         
     }
 

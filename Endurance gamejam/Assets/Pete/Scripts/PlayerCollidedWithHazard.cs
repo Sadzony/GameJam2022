@@ -10,9 +10,12 @@ public class PlayerCollidedWithHazard : MonoBehaviour
     private GameObject collidedFX;
     private bool doOnce = false;
     AudioSource explosionAudio;
+
+    private PersonExplode personExploder;
     private void Awake()
     {
         explosionAudio = GetComponent<AudioSource>();
+        personExploder = FindObjectOfType<PersonExplode>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +29,7 @@ public class PlayerCollidedWithHazard : MonoBehaviour
                 explosionAudio.Play();
                 temp.transform.localScale = new Vector3(5, 5, 5);
                 doOnce = true;
+                personExploder.Explode();
         }
     }
 

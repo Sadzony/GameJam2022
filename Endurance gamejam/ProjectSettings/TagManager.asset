@@ -11,6 +11,7 @@ TagManager:
   - DeliverableHouse
   - Hazard
   - FxTemporaire
+  - Newspaper
   layers:
   - Default
   - TransparentFX
@@ -21,10 +22,7 @@ TagManager:
   - Particle
   - Bike
   - Man
-  - 
-  - 
-  - 
-  - 
+  - Ragdoll
   - 
   - 
   - 
