@@ -9,6 +9,7 @@ TagManager:
   - HouseRight
   - Loader
   - DeliverableHouse
+  - Hazard
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &1340762672965972059
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958175939145293319}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &2434139942513699391
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236018702841131359}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5527019763413467651
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,9 +41,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 487666021655617303}
+  - component: {fileID: -5128285157861385799}
   m_Layer: 0
   m_Name: Mainbox
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +65,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5128285157861385799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5527019763413467651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a0edc6df443ff4aa71c67e607efb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderr: {fileID: 0}
 --- !u!1001 &5299118875103429008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,8 +145,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: MailBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4955753421189640503, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}
+--- !u!1 &958175939145293319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4955753421183344535, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}
+  m_PrefabInstance: {fileID: 5299118875103429008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &958175939145187879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4955753421182911415, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}
@@ -173,8 +228,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: MailBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4955753421189640503, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}
+--- !u!1 &4236018702841131359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4955753421183344535, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}
+  m_PrefabInstance: {fileID: 9083483284583673544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4236018702841425279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4955753421182911415, guid: a74061f7064cabe48abd94df5ae5992d, type: 3}

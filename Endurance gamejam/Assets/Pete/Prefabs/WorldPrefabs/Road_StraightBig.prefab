@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511861177710565139}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.10016552, z: 1.244}
-  m_LocalScale: {x: 0.12499997, y: 0.5, z: 0.19999996}
+  m_LocalPosition: {x: 0, y: 2.2552738, z: 1.244}
+  m_LocalScale: {x: 0.12499997, y: 6.3024178, z: 0.19999996}
   m_Children: []
   m_Father: {fileID: 3258826625749814935}
   m_RootOrder: 0
@@ -169,8 +169,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7000119156440880464}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.10016552, z: -1.417}
-  m_LocalScale: {x: 0.12499997, y: 0.5, z: 0.19999996}
+  m_LocalPosition: {x: 0, y: 2.2552738, z: -1.417}
+  m_LocalScale: {x: 0.12499997, y: 6.3024178, z: 0.19999996}
   m_Children: []
   m_Father: {fileID: 3258826625749814935}
   m_RootOrder: 1
@@ -248,7 +248,6 @@ MonoBehaviour:
   Hazards:
   - {fileID: 8785571411330072868, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
   - {fileID: 2360672353538864226, guid: ea7cb4c7874597942a1c1730d4e1c1d7, type: 3}
-  - {fileID: 5283068285866820563, guid: 7ae4a36f533b4424c9ce73be31fdaec8, type: 3}
   - {fileID: 6204546806938141666, guid: 435ab349428704a4baf253c21384b7d3, type: 3}
   - {fileID: 7895170074998041604, guid: ad27655a8c0dd574e86bb9b79770a040, type: 3}
   - {fileID: 4521331064545101694, guid: b7fce13a55c8f99449aab436c1eed9b7, type: 3}
@@ -256,4 +255,4 @@ MonoBehaviour:
   - {fileID: 3813886899619782505, guid: 9e42e5eb82ff39d43956451cca10e479, type: 3}
   - {fileID: 3619200930047779935, guid: 37830472f1c09f142812c9be6e3dd0db, type: 3}
   - {fileID: 8785571411330072868, guid: fa75f278b729934408d343dbd5f615e9, type: 3}
-  SpawnPercentage: 90
+  SpawnPercentage: 25
