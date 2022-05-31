@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackValue: 1000
+  collidedFX: {fileID: 8410557287937581580, guid: f99e3d25a521669429ced85f3f22a0cb, type: 3}
 --- !u!65 &5443755098783806928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -197,7 +198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
@@ -284,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
@@ -458,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030281009108, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4909492030287309172, guid: 3a353cb65383ec045b6681c42c21329d, type: 3}
       propertyPath: m_Name
