@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackValue: 1000
+  collidedFX: {fileID: 8410557287937581580, guid: f99e3d25a521669429ced85f3f22a0cb, type: 3}
 --- !u!1001 &2417819374515268905
 PrefabInstance:
   m_ObjectHideFlags: 0
