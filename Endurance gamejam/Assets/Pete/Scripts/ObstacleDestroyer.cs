@@ -6,6 +6,14 @@ public class ObstacleDestroyer : MonoBehaviour
 {
     private void Awake() { GameObject.Destroy(this, 1); }
 
-    private void OnTriggerStay(Collider other) { if (other.tag == "Player") { GameObject.Destroy(gameObject); } }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            GameObject temp = transform.parent.gameObject;
+            GameObject.Destroy(temp);
+        }
+
+    }
 
 }// class
