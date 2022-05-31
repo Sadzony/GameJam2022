@@ -18,9 +18,15 @@ public class StopWatch : MonoBehaviour
 
     public TMP_Text SecondReader;
 
+    public TMP_Text scoreText;
+
+    public int score;
+
     public bool running;
 
     public float Distance;
+
+    [SerializeField] private ScoreController scoreMan;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +39,8 @@ public class StopWatch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        score = scoreMan.score;
+        scoreText.text = score.ToString();
 
         MinuteReader.SetText(min.ToString("0"));
 

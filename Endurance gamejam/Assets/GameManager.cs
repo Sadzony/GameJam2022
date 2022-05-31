@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
         GS = GameStates.NormalTrail;
         RandomNumChosen = false;
 
-        Score = 0;
         PScore = 0;
         HighScore = 0;
         

@@ -13,7 +13,7 @@ public class LoadScenes : MonoBehaviour
 
     [HideInInspector]public Slider steerSlider;
 
-    public GameObject scoreManager;
+    public ScoreController scoreManager;
 
     private bool stop;
 
@@ -47,6 +47,11 @@ public class LoadScenes : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    private void Delaylose()
+    {
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
     private void Lose()
@@ -83,8 +88,7 @@ public class LoadScenes : MonoBehaviour
 
         if (bikeAccel.stop)
         {
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-           
+            Invoke("Delaylose", 4f);
         }
     }
 
