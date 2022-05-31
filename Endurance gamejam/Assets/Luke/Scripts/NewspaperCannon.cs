@@ -32,6 +32,7 @@ public class NewspaperCannon : MonoBehaviour
         if (personExploder.exploded)
         {
             objectivePointer.enabled = false;
+            Destroy(transform.parent.gameObject);
             return;
         }
 
