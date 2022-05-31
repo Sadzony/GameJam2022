@@ -19,7 +19,8 @@ public class BikeAcceleration : MonoBehaviour
     bool braking = false;
     string lastButton = "";
 
-
+    AudioSource audioPedal;
+    AudioSource sparkAudio;
 
     //UI Variables
     [SerializeField] private Image directionArrowLeft;
@@ -30,7 +31,9 @@ public class BikeAcceleration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioPedal = GetComponent<AudioSource>();
         sparkStart = transform.GetChild(0).Find("sparksStart");
+        sparkAudio = sparkStart.GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         directionArrowLeft.enabled = false;
         directionArrowRight.enabled = false;
@@ -42,12 +45,14 @@ public class BikeAcceleration : MonoBehaviour
         {
             if (Input.GetKeyDown("left") && lastButton != "left")
             {
+                audioPedal.Play();
                 EnableLeftArrow();
                 applyForce = true;
                 lastButton = "left";
             }
             else if (Input.GetKeyDown("right") && lastButton != "right")
             {
+                audioPedal.Play();
                 EnableRightArrow();
                 applyForce = true;
                 lastButton = "right";
@@ -107,9 +112,17 @@ public class BikeAcceleration : MonoBehaviour
         {
             sparking = false;
         }
+        if (!coroutineRunning)
+        {
+            sparkAudio.Stop();
+        }
     }
     IEnumerator sparks()
     {
+        if (!sparkAudio.isPlaying)
+        {
+            sparkAudio.Play();
+        }
         if (!braking)
         {
             sparking = true;

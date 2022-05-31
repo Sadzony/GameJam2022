@@ -8,17 +8,22 @@ public class PlayerCollidedWithHazard : MonoBehaviour
     private float knockbackValue = 100;
     [SerializeField]
     private ParticleSystem collidedFX;
-
+    AudioSource explosionAudio;
+    private void Awake()
+    {
+        explosionAudio = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
-            if (other.tag == "Player") 
-            {
-                other.gameObject.GetComponent<BikeAcceleration>().stop = true;
-                other.transform.GetChild(0).GetComponent<BikeSteering>().enabled = false;
-                other.transform.GetChild(0).GetComponent<Rigidbody>().useGravity = true;
-                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(0, knockbackValue), Random.Range(0, knockbackValue), Random.Range(0, -knockbackValue)), ForceMode.Impulse);
-                collidedFX.Play();
-                other.gameObject.GetComponentInChildren<PersonExplode>().Explode();    
+        if (other.tag == "Player")
+        {
+            other.gameObject.GetComponent<BikeAcceleration>().stop = true;
+            other.transform.GetChild(0).GetComponent<BikeSteering>().enabled = false;
+            other.transform.GetChild(0).GetComponent<Rigidbody>().useGravity = true;
+            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(0, knockbackValue), Random.Range(0, knockbackValue), Random.Range(0, -knockbackValue)), ForceMode.Impulse);
+            collidedFX.Play();
+            explosionAudio.Play();
+            other.gameObject.GetComponentInChildren<PersonExplode>().Explode();
         }
     }
 
