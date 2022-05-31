@@ -18,14 +18,13 @@ public class BikeAcceleration : MonoBehaviour
     bool braking = false;
     string lastButton = "";
 
-<<<<<<< HEAD
+
 
     //UI Variables
     [SerializeField] private Image directionArrowLeft;
     [SerializeField] private Image directionArrowRight;
-=======
+
     bool coroutineRunning = false;
->>>>>>> main
 
     // Start is called before the first frame update
     void Start()
