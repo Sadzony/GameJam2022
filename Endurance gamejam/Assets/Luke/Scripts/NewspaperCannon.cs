@@ -20,7 +20,7 @@ public class NewspaperCannon : MonoBehaviour
     {
         objectiveController = FindObjectOfType<ObjectiveController>();
         objectivePointer = GetComponent<ObjectivePointer>();
-        personExploder = GetComponentInParent<PersonExplode>();
+        personExploder = FindObjectOfType<PersonExplode>();
         playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
         fired = false;
     }
