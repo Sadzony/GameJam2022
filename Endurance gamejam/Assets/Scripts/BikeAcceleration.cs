@@ -8,6 +8,7 @@ public class BikeAcceleration : MonoBehaviour
 {
     public bool stop = false;
     public float speedForSparks;
+    [HideInInspector] public bool sparking = false;
     public GameObject sparksPrefab;
     private Transform sparkStart;
     [SerializeField] private float torquePower;
@@ -102,9 +103,17 @@ public class BikeAcceleration : MonoBehaviour
                 StartCoroutine(sparks());
             }
         }
+        else
+        {
+            sparking = false;
+        }
     }
     IEnumerator sparks()
     {
+        if (!braking)
+        {
+            sparking = true;
+        }
         coroutineRunning = true;
         Instantiate(sparksPrefab, sparkStart);
         yield return new WaitForSeconds(0.1f);
