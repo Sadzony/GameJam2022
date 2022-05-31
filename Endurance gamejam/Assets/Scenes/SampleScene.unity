@@ -3292,7 +3292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a92c4822c544a241a75186606f516af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DifficultyIncreaseInterval: 10
+  DifficultyIncreaseInterval: 11
   SpawnRateIncase: 10
 --- !u!4 &1886745272
 Transform:
