@@ -479,6 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steerSensitivity: 0
   steerSlider: {fileID: 0}
+  scoreManager: {fileID: 0}
   bike: {fileID: 5935406398452302103, guid: 0b417426c33fffb40b2e2004b323a171, type: 3}
 --- !u!1 &200986961
 GameObject:
@@ -952,6 +953,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1185177356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185177361}
+  - component: {fileID: 1185177360}
+  - component: {fileID: 1185177359}
+  - component: {fileID: 1185177358}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1185177358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185177356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a856a45569f7b45929acb98aae7830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sec: 0
+  min: 0
+  startsec: 0
+  startmin: 0
+  MinuteReader: {fileID: 0}
+  SecondReader: {fileID: 0}
+  running: 0
+  Distance: 0
+--- !u!114 &1185177359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185177356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2109d580c1489444a839450404568f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  List: 
+  Score: 3
+  HighScore: 0
+  scoreControl: {fileID: 0}
+  scoreText: {fileID: 0}
+--- !u!114 &1185177360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185177356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8367cc335d95d84b8fe59e67f4b6ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GS: 0
+  Playerspeed: {fileID: 0}
+  Score: 0
+  PScore: 0
+  HighScore: 0
+  DownhillUIText: {fileID: 0}
+  TextDuration: 0
+  TextDurationE: 0
+  DownhillTimer: 0
+  DownhillTimerE: 0
+  SpeedMultiplier: 0
+  DownhillTextUp: 0
+  MinDownhillWait: 0
+  MaxDownhillWait: 0
+  RandomNumber: 0
+  DownhillWait: 0
+  DownhillWaitE: 0
+  RandomNumChosen: 0
+  NormalTrailM: 1
+--- !u!4 &1185177361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185177356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308700031
 GameObject:

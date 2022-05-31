@@ -13,6 +13,8 @@ public class LoadScenes : MonoBehaviour
 
     [HideInInspector]public Slider steerSlider;
 
+    public GameObject scoreManager;
+
     private bool stop;
 
     public GameObject bike;
